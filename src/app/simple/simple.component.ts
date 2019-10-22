@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class SimpleComponent {
     mensaje = 'Mensaje desde SimpleComponent';
+
+    cambiarMensaje(texto: string) {
+        this.mensaje = texto;
+    }
 }
