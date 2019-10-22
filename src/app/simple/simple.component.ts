@@ -21,6 +21,8 @@ export class SimpleComponent {
         importe: 12.345
     };
 
+    tarea2: Tarea;
+
     cambiarMensaje(texto: string) {
         this.mensaje = texto;
     }

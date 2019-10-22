@@ -11,6 +11,8 @@
 
 <pre>{{ tarea | keyvalue | json }}</pre>
 
+<p>Id de la segunda tarea: {{ tarea2?.id }}</p>
+
 <input #texto />
 
 <button (click)="cambiarMensaje(texto.value)">Cambiar mensaje</button>
