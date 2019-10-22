@@ -4,9 +4,11 @@
     <li>{{tarea.id | i18nPlural:mapeadoPlurales}}</li>
     <li>{{tarea.descripcion | titlecase | slice:0:15}}... {{tarea.descripcion | i18nSelect:mapeadoTarea | uppercase}}
     </li>
-    <li>{{tarea.fechaFinalizacion | date:'medium':'+0200':'es-ES'}}</li>
+    <li [class.fecha-pasada]="seHaPasadoLaFecha()">{{tarea.fechaFinalizacion | date:'medium':'+0200':'es-ES'}}</li>
     <li>{{tarea.importe | currency:'EUR':'symbol':'1.2-2':'es-ES'}}</li>
 </ul>
+
+<pre>{{ seHaPasadoLaFecha() }} {{tarea.fechaFinalizacion}}</pre>
 
 <pre>{{ tarea | json }}</pre>
 

@@ -12,7 +12,7 @@ export class SimpleComponent {
     mapeadoPlurales:
         { [k: string]: string } = { '=0': 'Tarea sin inicializar', '=1': 'Primera tarea', other: 'Tarea número #.' };
 
-    mapeadoTarea: any = {'Vender más': 'ADELANTE', 'Hacer el vago': 'Ejem...', other: 'Pues vale'};
+    mapeadoTarea: any = { 'Vender más': 'ADELANTE', 'Hacer el vago': 'Ejem...', other: 'Pues vale' };
 
     tarea: Tarea = {
         id: 1,
@@ -25,11 +25,14 @@ export class SimpleComponent {
 
     imgUrl = 'https://angular.io/assets/images/logos/angular/shield-large.svg';
 
+    seHaPasadoLaFecha(): boolean {
+        return this.tarea.fechaFinalizacion < new Date();
+    }
     cambiarMensaje(texto: string) {
         this.mensaje = texto;
     }
 
-    cambiarFecha(fecha: Date) {
-        this.tarea.fechaFinalizacion = fecha;
+    cambiarFecha(fecha: string) {
+        this.tarea.fechaFinalizacion = new Date(fecha);
     }
 }
