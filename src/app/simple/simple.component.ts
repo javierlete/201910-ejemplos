@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Tarea } from '../tarea';
 
 @Component({
@@ -7,7 +7,7 @@ import { Tarea } from '../tarea';
     styleUrls: ['./simple.component.css']
 })
 export class SimpleComponent {
-    mensaje = 'Mensaje desde SimpleComponent';
+    @Input() mensaje = 'Mensaje desde SimpleComponent';
 
     mapeadoPlurales:
         { [k: string]: string } = { '=0': 'Tarea sin inicializar', '=1': 'Primera tarea', other: 'Tarea número #.' };
