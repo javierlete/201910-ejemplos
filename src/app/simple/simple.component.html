@@ -2,7 +2,8 @@
 
 <ul>
     <li>{{tarea.id | i18nPlural:mapeadoPlurales}}</li>
-    <li>{{tarea.descripcion | titlecase | slice:0:15}}... {{tarea.descripcion | i18nSelect:mapeadoTarea | uppercase}}</li>
+    <li>{{tarea.descripcion | titlecase | slice:0:15}}... {{tarea.descripcion | i18nSelect:mapeadoTarea | uppercase}}
+    </li>
     <li>{{tarea.fechaFinalizacion | date:'medium':'+0200':'es-ES'}}</li>
     <li>{{tarea.importe | currency:'EUR':'symbol':'1.2-2':'es-ES'}}</li>
 </ul>
@@ -17,6 +18,11 @@
 
 <button (click)="cambiarMensaje(texto.value)">Cambiar mensaje</button>
 
-<input #fecha type="datetime-local" value="{{tarea.fechaFinalizacion | date:'yyyy-MM-ddTHH:mm:ss'}}"/>
+<input #fecha type="datetime-local" value="{{tarea.fechaFinalizacion | date:'yyyy-MM-ddTHH:mm:ss'}}" />
 
 <button (click)="cambiarFecha(fecha.value)">Cambiar fecha</button>
+
+<img src="{{imgUrl}}" />
+<!-- incrustamos en HTML (sólo se incrustará texto) -->
+<img [src]="imgUrl" />
+<!-- pasamos el valor con JavaScript (se pueden pasar objetos) -->

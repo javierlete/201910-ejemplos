@@ -23,6 +23,8 @@ export class SimpleComponent {
 
     tarea2: Tarea;
 
+    imgUrl = 'https://angular.io/assets/images/logos/angular/shield-large.svg';
+
     cambiarMensaje(texto: string) {
         this.mensaje = texto;
     }
