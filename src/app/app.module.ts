@@ -7,12 +7,14 @@ import { SimpleComponent } from './simple/simple.component';
 
 import localeEs from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
+import { ConfirmarComponent } from './confirmar/confirmar.component';
 
 registerLocaleData(localeEs, 'es');
 @NgModule({
   declarations: [
     AppComponent,
-    SimpleComponent
+    SimpleComponent,
+    ConfirmarComponent
   ],
   imports: [
     BrowserModule,
