@@ -24,6 +24,8 @@
 
 <button (click)="cambiarFecha(fecha.value)">Cambiar fecha</button>
 
+<button (click)="verEvento($event)">Ver evento en consola</button>
+
 <img src="{{imgUrl}}" />
 <!-- incrustamos en HTML (sólo se incrustará texto) -->
 <img [src]="imgUrl" />

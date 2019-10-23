@@ -35,4 +35,8 @@ export class SimpleComponent {
     cambiarFecha(fecha: string) {
         this.tarea.fechaFinalizacion = new Date(fecha);
     }
+
+    verEvento(evento) {
+        console.log(evento.target.innerHTML);
+    }
 }
