@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ejemplos';
+
+  onRespuestaRecibida(respuesta: boolean) {
+    console.log('RESPUESTA RECIBIDA');
+    console.log(respuesta);
+  }
 }

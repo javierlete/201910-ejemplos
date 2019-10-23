@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-confirmar',
   templateUrl: './confirmar.component.html',
   styleUrls: ['./confirmar.component.css']
 })
-export class ConfirmarComponent implements OnInit {
+export class ConfirmarComponent {
+  @Output() respuestaRecibida = new EventEmitter<boolean>();
 
-  constructor() { }
-
-  ngOnInit() {
+  onAceptar() {
+    console.log('ACEPTAR');
+    this.respuestaRecibida.emit(true);
   }
 
+  onCancelar() {
+    console.log('CANCELAR');
+    this.respuestaRecibida.emit(false);
+  }
 }
