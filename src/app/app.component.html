@@ -1,5 +1,13 @@
 <h1>Aplicación de ejemplos</h1>
 
+<div [ngSwitch]="valor">
+    <p *ngSwitchCase="1">UNO</p>
+    <p *ngSwitchCase="2">DOS</p>
+    <p *ngSwitchCase="3">TRES</p>
+    <p *ngSwitchDefault>OTRO</p>
+</div>
+
+
 <ul>
     <li *ngFor="let elemento of elementos; let i=index">{{i + 1}}: {{elemento}}</li>
 </ul>

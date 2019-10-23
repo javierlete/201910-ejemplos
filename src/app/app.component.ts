@@ -14,6 +14,8 @@ export class AppComponent {
     'Uno', 'Dos', 'Tres'
   ];
 
+  valor = 5;
+
   onRespuestaRecibida(respuesta: boolean) {
     console.log('RESPUESTA RECIBIDA');
     console.log(respuesta);
