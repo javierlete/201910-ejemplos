@@ -1,5 +1,9 @@
 <h1>Aplicación de ejemplos</h1>
 
+<ul>
+    <li *ngFor="let elemento of elementos; let i=index">{{i + 1}}: {{elemento}}</li>
+</ul>
+
 <app-confirmar (respuestaRecibida)="onRespuestaRecibida($event)"></app-confirmar>
 
 <div *ngIf="respuesta === true else respuestaNegativa">

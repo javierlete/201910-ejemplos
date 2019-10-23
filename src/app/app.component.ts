@@ -10,6 +10,10 @@ export class AppComponent {
 
   respuesta: boolean;
 
+  elementos: string[] = [
+    'Uno', 'Dos', 'Tres'
+  ];
+
   onRespuestaRecibida(respuesta: boolean) {
     console.log('RESPUESTA RECIBIDA');
     console.log(respuesta);
