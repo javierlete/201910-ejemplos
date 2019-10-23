@@ -8,8 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ejemplos';
 
+  respuesta: boolean;
+
   onRespuestaRecibida(respuesta: boolean) {
     console.log('RESPUESTA RECIBIDA');
     console.log(respuesta);
+    this.respuesta = respuesta;
   }
 }
