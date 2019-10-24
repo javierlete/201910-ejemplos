@@ -21,6 +21,15 @@
 
 <app-confirmar (respuestaRecibida)="onRespuestaRecibida($event)"></app-confirmar>
 
+<div>
+    <ng-container *ngIf="respuesta === true else respuestaNegativa">
+        La respuesta ha sido positiva
+    </ng-container>
+    <ng-template #respuestaNegativa>
+        La respuesta ha sido negativa
+    </ng-template>
+</div>
+
 <div *ngIf="respuesta === true else respuestaNegativa">
     La respuesta ha sido positiva
 </div>
