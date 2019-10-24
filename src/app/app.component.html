@@ -1,5 +1,15 @@
 <h1>Aplicación de ejemplos</h1>
 
+<ng-template [appUnless]="respuesta">
+    <p>
+        Prueba
+    </p>
+</ng-template>
+
+<p *appUnless="respuesta">
+    Prueba
+</p>
+
 <p>{{ hoy | fecha }}</p>
 <p appIluminar>{{ hoy | fecha:'corto' }}</p>
 <p appIluminar="green">{{ hoy | date:'yyyy-M-d'}}</p>

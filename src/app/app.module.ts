@@ -12,6 +12,7 @@ import { Componente1Component } from './componente1';
 import { Componente2Component } from './componente2';
 import { FechaPipe } from './fecha.pipe';
 import { IluminarDirective } from './iluminar.directive';
+import { UnlessDirective } from './unless.directive';
 
 registerLocaleData(localeEs, 'es');
 @NgModule({
@@ -22,7 +23,8 @@ registerLocaleData(localeEs, 'es');
     Componente1Component,
     Componente2Component,
     FechaPipe,
-    IluminarDirective
+    IluminarDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
