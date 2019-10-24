@@ -10,6 +10,7 @@ import { registerLocaleData } from '@angular/common';
 import { ConfirmarComponent } from './confirmar/confirmar.component';
 import { Componente1Component } from './componente1';
 import { Componente2Component } from './componente2';
+import { FechaPipe } from './fecha.pipe';
 
 registerLocaleData(localeEs, 'es');
 @NgModule({
@@ -18,7 +19,8 @@ registerLocaleData(localeEs, 'es');
     SimpleComponent,
     ConfirmarComponent,
     Componente1Component,
-    Componente2Component
+    Componente2Component,
+    FechaPipe
   ],
   imports: [
     BrowserModule,
