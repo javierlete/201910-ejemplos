@@ -11,6 +11,7 @@ import { ConfirmarComponent } from './confirmar/confirmar.component';
 import { Componente1Component } from './componente1';
 import { Componente2Component } from './componente2';
 import { FechaPipe } from './fecha.pipe';
+import { IluminarDirective } from './iluminar.directive';
 
 registerLocaleData(localeEs, 'es');
 @NgModule({
@@ -20,7 +21,8 @@ registerLocaleData(localeEs, 'es');
     ConfirmarComponent,
     Componente1Component,
     Componente2Component,
-    FechaPipe
+    FechaPipe,
+    IluminarDirective
   ],
   imports: [
     BrowserModule,
